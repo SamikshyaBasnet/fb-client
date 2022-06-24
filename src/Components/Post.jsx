@@ -8,7 +8,8 @@ import ExpandMoreOutlined from '@material-ui/icons/ExpandMoreOutlined'
 import AccountCircleIclon from '@material-ui/icons/AccountCircle'
 
 const Post = ({ profilePic, imgName, username, timestamp, message }) => {
-    console.log(timestamp)
+    console.log(timestamp);
+    const url = 'https://final-fb-clone.herokuapp.com'
     return (
         <div className='post' >
             <div className="post__top">
@@ -25,7 +26,7 @@ const Post = ({ profilePic, imgName, username, timestamp, message }) => {
             {
                 imgName ? (
                     <div className="post__image">
-                        <img src={`/retrieve/image/single?name=${imgName}`} />
+                        <img src={`${url}/retrieve/image/single?name=${imgName}`} />
                     </div>
                 ) : (
                     console.log('DEBUG >>> no image here')
